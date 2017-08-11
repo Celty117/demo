@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'iconfont';
+            /* project id 381322 */
+            src: url('//at.alicdn.com/t/font_381322_z7yw3h39jr0vbo6r.eot');
+            src: url('//at.alicdn.com/t/font_381322_z7yw3h39jr0vbo6r.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_381322_z7yw3h39jr0vbo6r.woff') format('woff'),
+            url('//at.alicdn.com/t/font_381322_z7yw3h39jr0vbo6r.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_381322_z7yw3h39jr0vbo6r.svg#iconfont') format('svg');
+        }
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        .item {
+            margin: 0 auto;
+            width: 520px;
+            padding: 10px;
+        }
+
+        .head .portrait {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        .head .username {
+            margin: 0 8px;
+            /* display: inline-block; */
+            vertical-align: top;
+            line-height: 35px;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .head .time {
+            vertical-align: top;
+            line-height: 35px;
+            color: rgb(175, 175, 175);
+            font-size: 14px;
+        }
+
+        .article {
+            margin: 10px 0 0 0;
+        }
+
+        .article .title {
+            margin: 0;
+        }
+
+        .article .article-left {
+            width: 348px;
+            float: left;
+        }
+        /* .article .article-left .content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: box;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+        } */
+
+        .article .article-left .content {
+            position: relative;
+            line-height: 1.4em;
+            /* 3 times the line-height to show 3 lines */
+            height: 4.2em;
+            overflow: hidden;
+        }
+
+        .article .article-left .content::after {
+            content: "...";
+            font-weight: bold;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            /* padding: 0 20px 1px 45px; */
+            background-color: #fff;
+            /* background: url(http://css88.b0.upaiyun.com/css88/2014/09/ellipsis_bg.png) repeat-y; */
+        }
+
+        .article .image {
+            margin: 22px 18px;
+            width: 124px;
+            height: 100px;
+            float: left;
+        }
+        .bottom .btn{
+            display: inline-block;
+            padding: 3px 7px;
+            line-height: 1em;
+            border: 1px solid rgb(235, 115, 93);
+            border-radius: 10%;
+        }
+        .bottom .btn a{
+            font-size: 14px;
+            color: rgb(235, 115, 93);
+        }
+        .bottom .icon{
+            margin-left: 13px;
+            font-size: 12px;
+            color: rgb(182, 182, 182);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <div class="head">
+            <img class="portrait" src="http://tva3.sinaimg.cn/crop.33.0.292.292.50/69c76a90jw8f8z2cqhwsij209n08udh5.jpg" alt="头像">
+            <span class="username">乐之读</span>
+            <span class="time">昨天 11:11</span>
+        </div>
+        <div class="article clearfix">
+            <div class="article-left">
+                <h3 class="title">聊一聊字体图标的实现原理？字体图标的实现原理是怎样的？</h3>
+                <p class="content">
+                    大家应该都知道这几行代码是什么意思——把 p 标签里的内容设置为字体 serif，此时页面上段落里的内容就以该字体的样式去展示。这里有个问题，为什么字体设置为 serif 页面展示的文字是 serif 的样式，设置成微软雅黑就展示成微软雅黑的外形呢？
+回答这个问题前，先看下面一个例子
+                </p>
+            </div>
+
+            <img src="http://ww1.sinaimg.cn/thumb180/69c76a90gw1elhjlcvkl6j2050050q2z.jpg" alt="美景" class="image">
+        </div>
+        <div class="bottom">
+            <span class="btn"><a href="">谈写作</a></span>
+            <a class="icon"><i class="iconfont">&#xe6e5;</i>6666</a>
+            <a class="icon"><i class="iconfont">&#xe70d;</i>6666</a>
+            <a class="icon"><i class="iconfont">&#xe707;</i>666</a>
+            <a class="icon"><i class="iconfont">&#xe748;</i>66</a>
+        </div>
+    </div>
+</body>
+</html>
