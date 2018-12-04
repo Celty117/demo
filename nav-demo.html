@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <title>我的导航</title>
+</head>
+
+<body>
+  <header></header>
+  <main id="mainxxx">
+  </main>
+  <footer></footer>
+  <script>
+    var keys = {
+      '0': ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+      '1': ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+      '2': ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
+      'length': 3
+    }
+    var hash = {
+      'q': 'qq.com',
+      'w': 'weibo.com',
+      'e': 'ele.me',
+      'r': 'renren.com',
+      't': 'taobao.com',
+      'y': 'youtube',
+      'u': 'uc.com',
+      'i': 'iqiyi.com',
+      'o': 'opera',
+      'p': undefined,
+      'a': 'acfun.tv',
+      's': 'sohu.com',
+      'z': 'zhihu.com',
+      'm': 'www.mcdonalds.com.cn'
+    }
+
+    index = 0
+    while (index < keys['length']) {
+      divxxx = document.createElement('div')
+      mainxxx.appendChild(divxxx)
+      index2 = 0
+      while (index2 < 10) {
+        kbdxxx = document.createElement('kbd')
+        kbdxxx.textContent = 'hi'
+        divxxx.appendChild(kbdxxx)
+        index2 = index2 + 1
+      }
+      index = index + 1
+    }
+
+  </script>
+</body>
+
+</html>
