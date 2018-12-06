@@ -4,18 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <title>我的导航</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <header></header>
-  <main id="mainxxx">
+  <main>
+    <div class="wrapper" id="mainxxx">
+
+    </div>
   </main>
   <footer></footer>
   <script>
     var keys = {
-      '0': ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
-      '1': ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
-      '2': ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
+      '0': { 0: 'q', 1: 'w', 2: 'e', 3: 'r', 4: 't', 5: 'y', 6: 'u', 7: 'i', 8: 'o', 9: 'p', length: 10 },
+      '1': { 0: 'a', 1: 's', 2: 'd', 3: 'f', 4: 'g', 5: 'h', 6: 'j', 7: 'k', 8: 'l', length: 9 },
+      '2': { 0: 'z', 1: 'x', 2: 'c', 3: 'v', 4: 'b', 5: 'n', 6: 'm', length: 7 },
       'length': 3
     }
     var hash = {
@@ -36,19 +40,29 @@
     }
 
     index = 0
-    while (index < keys['length']){
+    while (index < keys['length']) {
       divxxx = document.createElement('div')
       mainxxx.appendChild(divxxx)
+      row = keys[index]
       index2 = 0
-      while (index2 < 10){
+      while (index2 < row['length']) {
         kbdxxx = document.createElement('kbd')
-        kbdxxx.textContent = 'hi'
+        kbdxxx.textContent = row[index2]
+        buttonx = document.createElement('button')
+        buttonx.textContent = '编辑'
+        kbdxxx.appendChild(buttonx)
         divxxx.appendChild(kbdxxx)
         index2 = index2 + 1
       }
       index = index + 1
-    }sadasdasd
+    }
 
+    document.onkeypress = function (xzkjcnxlkcjlk) {
+      key = xzkjcnxlkcjlk['key']  // 拿到用户输入的键
+      website = hash[key]  // 得到这个键对应的网站
+      //location.href = 'http://' + website//  // 把当前地址变成新的网站的地址
+      window.open('http://' + website, '_blank')  // 在新标签打开这个网址
+    }
   </script>
 </body>
 
