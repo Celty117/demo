@@ -10,7 +10,7 @@
 <body>
   <header></header>
   <main>
-    <div class="wrapper" id="mainxxx">
+    <div class="wrapper" id="main">
 
     </div>
   </main>
@@ -39,32 +39,40 @@
       'm': 'www.mcdonalds.com.cn'
     }
     // 取出 localStorage 中的 zzz 对应的 hash
-    hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || '')
-    if(hashInLocalStorage){
+    hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
+    if (hashInLocalStorage) {
       hash = hashInLocalStorage
     }
 
     // 遍历 keys，生成 kbd 标签
     index = 0
     while (index < keys['length']) {
-      divxxx = document.createElement('div')
-      mainxxx.appendChild(divxxx)
+      div = document.createElement('div')
+      div.className = 'row'
+      main.appendChild(div)
       row = keys[index]
       index2 = 0
-      while (index2 < row['length']) {
-        kbdxxx = document.createElement('kbd')
-        kbdxxx.textContent = row[index2]
-        buttonx = document.createElement('button')
-        buttonx.textContent = '编辑'
-        buttonx.id = row[index2]
-        buttonx.onclick = function (xzkjcnxlkcjlk) {
+      while (index2 < row['length']) {  // 0~9 0~8 0~6
+        kbd = document.createElement('kbd')
+        span = document.createElement('span')
+        span.textContent = row[index2]
+        span.className = 'text'
+        kbd.appendChild(span)
+        kbd.className = 'key'
+        button = document.createElement('button')
+        button.textContent = '编辑'
+        button.id = row[index2]
+        img = document.createElement('img')
+        img.src = 'https://'+hash[row[index2]]+'/favicon.ico'
+        button.onclick = function (xzkjcnxlkcjlk) {
           key = xzkjcnxlkcjlk['target']['id']  // 拿到用户点的哪个按钮
           x = prompt('给我一个网址')  //  用户输入的网址存到x里 
           hash[key] = x  //  让hash[key]里对应的值变成x的值,hash变更
-          localStorage.setItem('zzz',JSON.stringify(hash))
+          localStorage.setItem('zzz', JSON.stringify(hash))
         }
-        kbdxxx.appendChild(buttonx)
-        divxxx.appendChild(kbdxxx)
+        kbd.appendChild(img)
+        kbd.appendChild(button)
+        div.appendChild(kbd)
         index2 = index2 + 1
       }
       index = index + 1

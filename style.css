@@ -22,16 +22,51 @@ kbd>button{
 kbd:hover>button{
   display: inline-block;
 }
-
+body{
+  background: grey url(./img/sky.jpg) no-repeat center center;
+  background-size: cover;
+}
 main{
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-#mainxxx{
+#main{
   display: inline-block;
 }
-#mainxxx>div:nth-child(2){
-  margin-left: 2em;
+#main>div:nth-child(2){
+  margin-left: -22px;
 }
-#mainxxx>div:nth-child(3){
-  margin-left: 4em;
+#main>div:nth-child(3){
+  margin-left: -82px;
+}
+.wrapper{
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+.key{
+  width: 50px;
+  height: 40px;
+  background: linear-gradient(to bottom, #292929 0%,#111111 100%);
+  border: 1px solid #373737;
+  color: #c5c5c5;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 3px 0 2px #080808;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Helvetica;
+}
+.row{
+  margin: 20px;
+}
+.row .key{
+  margin: 0 10px;
+}
+.key .img{
+  width: 16px;
+  height: 16px;
 }
