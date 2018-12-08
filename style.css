@@ -54,11 +54,9 @@ main{
   color: #c5c5c5;
   border-radius: 6px;
   box-shadow: 0 0 0 1px #1a1b1c, 0 0 0 2px #1f2020, 0 3px 0 2px #080808;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   font-size: 16px;
   font-family: Helvetica;
+  position: relative;
 }
 .row{
   margin: 20px;
@@ -66,7 +64,15 @@ main{
 .row .key{
   margin: 0 10px;
 }
-.key .img{
+.key img{
   width: 16px;
   height: 16px;
+  position: absolute;
+  left: 4px;
+  bottom: 2px;
+}
+.key .text{
+  position: absolute;
+  left: 4px;
+  top: 2px;
 }

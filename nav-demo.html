@@ -63,7 +63,11 @@
         button.textContent = '编辑'
         button.id = row[index2]
         img = document.createElement('img')
-        img.src = 'https://'+hash[row[index2]]+'/favicon.ico'
+        if (hash[row[index2]]) {
+          img.src = 'https://' + hash[row[index2]] + '/favicon.ico'
+        } else {
+          img.src = ''
+        }
         button.onclick = function (xzkjcnxlkcjlk) {
           key = xzkjcnxlkcjlk['target']['id']  // 拿到用户点的哪个按钮
           x = prompt('给我一个网址')  //  用户输入的网址存到x里 
