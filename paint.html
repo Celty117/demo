@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>我的小画板</title>
+  <link rel="stylesheet" href="./css/canvas.css">
 </head>
 
 <body>
@@ -95,7 +96,9 @@
       var x = aaa.clientX
       var y = aaa.clientY
 
-      if (!using) { return }
+      if (!using) {
+        return
+      }
 
       if (eraserEnabled) {
         context.clearRect(x - 5, y - 5, 10, 10)

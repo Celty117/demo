@@ -23,7 +23,7 @@ kbd:hover>button{
   display: inline-block;
 }
 body{
-  background: grey url(./img/sky.jpg) no-repeat center center;
+  background: grey url(../img/sky.jpg) no-repeat center center;
   background-size: cover;
 }
 main{
