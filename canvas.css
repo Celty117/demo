@@ -2,7 +2,7 @@ body{
   margin: 0;
 }
 #canvas{
-  background: red;
+  background: yellow;
   height: 100vh;
   position: relative;
 }
