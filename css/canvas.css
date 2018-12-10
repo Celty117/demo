@@ -49,6 +49,9 @@ body{
   margin: 10px 0;
   transition: all 0.3s;
 }
+.colors>li.black{
+  background: black;
+}
 .colors>li.red{
   background: red;
 }
@@ -61,4 +64,20 @@ body{
 .colors>li.active{
   box-shadow: 0 0 3px rgba(0,0,0,0.9);
   transform: scale(1.2);
+}
+.size{
+  position: fixed;
+  right: 20px;
+  top: 24px;
+}
+.size>.thin{
+  height: 0;
+  width: 20px;
+  border-top: 5px solid black;
+  margin-bottom: 20px;
+}
+.size>.thick{
+  height: 0;
+  width: 20px;
+  border-top: 10px solid black;
 }
