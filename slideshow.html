@@ -6,20 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>轮播</title>
   <style>
-    
+    .images {
+      display: flex;
+      align-items: flex-start;
+    }
+    .images>img {
+      vertical-align: top;
+    }
+    .slideshow {
+      width: 600px;
+      overflow: hidden;
+    }
+    .red{
+      color: red;
+    }
   </style>
 </head>
 
 <body>
   <div class="slideshow">
     <div class="images" id="images">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+      <img src="./img/slide1.jpg" alt="" width="600px">
+      <img src="./img/slide2.jpg" alt="" width="600px">
+      <img src="./img/slide3.jpg" alt="" width="600px">
+      <img src="./img/slide4.jpg" alt="" width="600px">
+      <img src="./img/slide5.jpg" alt="" width="600px">
     </div>
   </div>
+  <span id="buttons">
+    <span>第1张</span>
+    <span>第2张</span>
+    <span>第3张</span>
+    <span>第4张</span>
+    <span>第5张</span>
+  </span>
 </body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 
 </html>
