@@ -1,0 +1,2 @@
+var allbuttons = $('buttons>span')
+
