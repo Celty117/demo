@@ -20,11 +20,12 @@ palySlide(n % size)
 var timerId = setTimer()
 
 function setTimer() {
-  setInterval(() => {
+  return setInterval(() => {
     n += 1
     palySlide(n % size)
   }, 2000)
 }
+
 
 function palySlide(index) {
   allbuttons.eq(index).trigger('click')
@@ -42,4 +43,5 @@ $('.slideshow').on('mouseenter', function () {
 
 $('.slideshow').on('mouseleave', function () {
   timerId = setTimer()
+  console.log(timerId)
 })
