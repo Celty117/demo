@@ -1,44 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>轮播</title>
-  <style>
-    .slideshow {
-      width: 600px;
-      overflow: hidden;
-    }
-    .images {
-      display: flex;
-      align-items: flex-start;
-      transition: transform 0.5s ease-in-out;
-    }
-    .images>img {
-      vertical-align: top;
-    }
-    .red {
-      color: red;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/slideshow.css">
 </head>
 
 <body>
   <div class="slideshow">
     <div class="images" id="images">
-      <img src="./img/slide1.jpg" alt="" width="600px">
-      <img src="./img/slide2.jpg" alt="" width="600px">
-      <img src="./img/slide3.jpg" alt="" width="600px">
-      <img src="./img/slide4.jpg" alt="" width="600px">
-      <img src="./img/slide5.jpg" alt="" width="600px">
+      <img src="./img/slide1.jpg" alt="">
+      <img src="./img/slide2.jpg" alt="">
+      <img src="./img/slide3.jpg" alt="">
+      <img src="./img/slide4.jpg" alt="">
+      <img src="./img/slide5.jpg" alt="">
     </div>
   </div>
-  <button id="p1">第1张</button>
-  <button id="p2">第2张</button>
-  <button id="p3">第3张</button>
-  <button id="p4">第4张</button>
-  <button id="p5">第5张</button>
+  <span id="buttons">
+    <button>第1张</button>
+    <button>第2张</button>
+    <button>第3张</button>
+    <button>第4张</button>
+    <button>第5张</button>
+  </span>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script src="./js/slideshow.js"></script>

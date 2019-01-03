@@ -1,27 +1,11 @@
-var allbuttons = $('buttons>span')
+var allbuttons = $('#buttons>button')
 
-$(p1).on('click',function(){
-  $(images).css({
-    transform:'translateX(0)'
+for (let i = 0; i < allbuttons.length; i++) {
+  $(allbuttons[i]).on('click', function (x) {
+    var index = $(x.currentTarget).index()
+    var n = index * -600
+    $('#images').css({
+      transform: 'translateX(' + n + 'px)'
+    })
   })
-})
-$(p2).on('click',function(){
-  $(images).css({
-    transform:'translateX(-600px)'
-  })
-})
-$(p3).on('click',function(){
-  $(images).css({
-    transform:'translateX(-1200px)'
-  })
-})
-$(p4).on('click',function(){
-  $(images).css({
-    transform:'translateX(-1800px)'
-  })
-})
-$(p5).on('click',function(){
-  $(images).css({
-    transform:'translateX(-2400px)'
-  })
-})
+}

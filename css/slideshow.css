@@ -1,0 +1,16 @@
+.slideshow {
+  width: 600px;
+  overflow: hidden;
+}
+.images {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.5s ease-in-out;
+}
+.images>img {
+  vertical-align: top;
+  width: 600px;
+}
+.red {
+  color: red;
+}
