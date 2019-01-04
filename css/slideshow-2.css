@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slideshow{
+  height: 337.5px;
+  width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+.images{
+  position: relative;
+}
+.images>img{
+  position: absolute;
+  top: 0;
+  transition: all 0.7s ease;
+}
+.images>img.current{
+  left: 0;
+  transform: translateX(0);
+  z-index: 1;
+}
+.images>img.leave{
+  transform: translateX(-100%);
+}
+.images>img.enter{
+  transform: translateX(100%);
+}
