@@ -10,7 +10,6 @@ setInterval(() => {
   $(`.images>img:nth-child(${x(n + 1)})`).removeClass('enter').addClass('current')
   $(`.images>img:nth-child(${x(n + 2)})`).removeClass('leave').addClass('enter')
   n += 1
-  console.log(n)
 }, 2000)
 
 function x(n) {
