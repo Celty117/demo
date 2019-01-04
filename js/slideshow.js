@@ -1,6 +1,5 @@
 var allbuttons = $('#buttons>button')
 
-
 for (let i = 0; i < allbuttons.length; i++) {
   $(allbuttons[i]).on('click', function (x) {  // $(allbuttons[i]) === allbuttons.eq(i)
     var index = $(x.currentTarget).index()
@@ -25,7 +24,6 @@ function setTimer() {
     palySlide(n % size)
   }, 2000)
 }
-
 
 function palySlide(index) {
   allbuttons.eq(index).trigger('click')
