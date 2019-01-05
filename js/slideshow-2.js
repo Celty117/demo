@@ -1,3 +1,4 @@
+/*
 $('.images > img:nth-child(1)').addClass('current')
 $('.images > img:nth-child(2)').addClass('enter')
 $('.images > img:nth-child(3)').addClass('enter')
@@ -24,11 +25,11 @@ function x(n) {
   }
   return n
 }
+*/
 
 
 
 
-/*
 let n
 初始化()
 setInterval(()=>{
@@ -79,4 +80,3 @@ function makeLeave($node){
 function makeEnter($node){
   return $node.removeClass('leave current').addClass('enter')
 }
-*/

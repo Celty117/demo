@@ -41,5 +41,4 @@ $('.slideshow').on('mouseenter', function () {
 
 $('.slideshow').on('mouseleave', function () {
   timerId = setTimer()
-  console.log(timerId)
 })
