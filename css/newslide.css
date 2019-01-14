@@ -1,0 +1,21 @@
+*{
+  margin:0;
+  padding:0;
+}
+*{
+  box-sizing: border-box;
+}
+
+.slideshow{
+  width: 600px;
+  height: 337.5px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+.images{
+  display: flex;
+  transition: all 1s;
+}
+.images > img{
+  height: 100%;
+}
